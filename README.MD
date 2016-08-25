@@ -7,6 +7,7 @@ This is sample project which will demostrate internal guidelines and provide reu
 |---|---|
 |Node JS|latest|
 |Bower|latest|
+|Bootstrap|3.3.7|
 
 
 |Node Modules|
