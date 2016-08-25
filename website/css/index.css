@@ -1,0 +1,27 @@
+/*-----------------------------------------------------
+  $SAMPLE
+  -----------------------------------------------------*/
+/**
+  * SAMPLE ..........................................
+  */
+.hover-div:hover,
+.hover-p:hover {
+  color: #ddd;
+  font-weight: bold;
+}
+
+.search-module {
+  padding: 5px;
+}
+
+.search-module .search-submodule {
+  padding: 2px;
+}
+
+.search {
+  color: #ccc;
+}
+
+.js-button-click {
+  color: red;
+}

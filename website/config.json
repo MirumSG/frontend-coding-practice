@@ -1,0 +1,30 @@
+{
+  "projName": "malaysia-airline",
+  "destPath": ".",
+  "path": {
+    "servepath": ".",
+    "stagepath": "./stage",
+    "distpath": "dist",
+    "assetspath": "/etc/designs/mas"
+  },
+  "server": {
+    "lrStarted": false,
+    "connection": {
+      "local": "localhost",
+      "external": null,
+      "port": null
+    }
+  },
+  "build": {
+    "isStage": false,
+    "isProd": false
+  },
+  "ftpserver": {
+    "host": "203.208.241.213",
+    "port": 22,
+    "user": "leon",
+    "pass": "xm4U2012",
+    "remotePath": "/rsw2010.xm-apac.com"
+  },
+  "jsminify": ["home.js", "fare-compare.js"]
+}
