@@ -1,0 +1,11 @@
+/**
+ * command design pattern
+ *
+ *
+ *
+ *
+ */
+ ;(function(){
+
+
+ })();
