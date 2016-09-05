@@ -1,0 +1,11 @@
+block variables
+  - var title = "About"
+extends ../layouts/default
+block content
+  div.container
+    h1 About page
+    div.well#about
+
+block content-script
+  script.
+    SystemJS.import('about.js');

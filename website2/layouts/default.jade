@@ -1,0 +1,15 @@
+block variables
+doctype html
+html
+  head
+    title= title
+  body
+    block content
+    script(src="/js/vendors/system.js", type="text/javascript")
+    script.
+      SystemJS.config({
+        baseURL: '/js'
+      });
+
+      SystemJS.import('main.js');
+    block content-script
