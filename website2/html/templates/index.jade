@@ -1,0 +1,13 @@
+block variables
+  - var title = "Home"
+extends ../layouts/default
+block content
+  div.container
+    include ../components/header
+    h2 Home page
+    div.well#name
+    include ../components/product
+append content-script
+  script.
+    SystemJS.import('header.js');
+    SystemJS.import('product.js');

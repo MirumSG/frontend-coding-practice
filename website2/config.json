@@ -6,7 +6,8 @@
     "distpath": "./dist",
     "jadepath": ".",
     "jspath": "./js",
-    "csspath": "./css"
+    "csspath": "./css",
+    "libspath": "./assets/vendors"
   },
   "server": {
     "lrStarted": false,

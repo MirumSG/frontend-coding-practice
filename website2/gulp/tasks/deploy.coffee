@@ -9,7 +9,7 @@ gulp.task('deploy:stage', () ->
 )
 
 gulp.task('deploy:gh-stage', () ->
-  return gulp.src(config.path.stagepath+'/**/*')
+  return gulp.src(config.path.distpath+'/**/*')
     .pipe(ghPages({
       branch: 'release',
       cacheDir: '.release'

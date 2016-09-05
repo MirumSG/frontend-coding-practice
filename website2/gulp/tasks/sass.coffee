@@ -8,10 +8,10 @@ gulpIf = require 'gulp-if'
 browserSync = require 'browser-sync'
 sass = require 'gulp-sass'
 
-gulp.task('sass', ['del'], () ->
+gulp.task('sass', () ->
   console.log(chalk.magenta.inverse('processing sass files'))
-  return gulp.src([config.path.assetspath + '/css/**/*.scss'])
-    .pipe(sass.sync().on('error', handleErrors))
+  return gulp.src([config.path.assetspath + '/assets/sass/**/*.sass'])
+    .pipe(sass.sync({ includePaths: [config.path.libspath + '/bootstrap-sass/assets/stylesheets'] }).on('error', handleErrors))
     .pipe(gulp.dest(config.path.distpath + '/css'))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )

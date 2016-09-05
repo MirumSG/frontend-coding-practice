@@ -1,6 +1,7 @@
 import * as $ from 'jquery';
+System.import('bootstrap');
 
-class About {
+class Product {
   name: string;
   constructor(name: string) {
     this.name = name;
@@ -11,5 +12,6 @@ class About {
   }
 }
 
-let about = new About('Win1');
-$('#about').html(about.greet());
+let product = new Product('Product');
+console.log("From product");
+console.log(product);

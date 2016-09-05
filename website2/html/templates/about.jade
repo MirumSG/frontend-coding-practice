@@ -1,0 +1,14 @@
+block variables
+  - var title = "About"
+extends ../layouts/default
+block content
+  div.container
+    include ../components/header
+    h2 About page
+    div.well#about
+    include ../components/footer
+append content-script
+  script.
+    SystemJS.import('header.js');
+    SystemJS.import('footer.js');
+

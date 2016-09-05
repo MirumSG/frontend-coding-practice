@@ -13,9 +13,9 @@ ts = require 'gulp-typescript'
 
 tsProject = ts.createProject('tsconfig.json')
 
-gulp.task('ts', ['del'], (cb) ->
+gulp.task('ts', (cb) ->
   console.log(chalk.magenta.inverse('» Compiling ts...'))
-  return gulp.src([config.path.assetspath + '/js/**/*.ts'])
+  return gulp.src([config.path.assetspath + '/assets/ts/**/*.ts'])
     .pipe(ts(tsProject))
     .pipe(gulp.dest(config.path.distpath + '/js'))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));

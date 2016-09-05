@@ -26,13 +26,13 @@ gulp.task('watch', ['browsersync'], () ->
     browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/css/**/*.scss']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/sass/**/*.scss', config.path.assetspath + '/sass/**/*.sass']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('sass')
     browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/js/**/*.ts']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/ts/**/*.ts']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('ts')
     browserSync.reload()

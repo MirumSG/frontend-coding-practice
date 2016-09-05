@@ -1,6 +1,7 @@
 import * as $ from 'jquery';
+System.import('bootstrap');
 
-class Home {
+class Header {
   name: string;
   constructor(name: string) {
     this.name = name;
@@ -11,5 +12,5 @@ class Home {
   }
 }
 
-let home = new Home('Win');
-$('#name').html(home.greet());
+let header = new Header('Win');
+$('#name').html(header.greet());

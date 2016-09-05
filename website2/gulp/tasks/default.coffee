@@ -5,14 +5,14 @@ chalk = require 'chalk'
 runSequence = require 'run-sequence'
 fs = require 'fs'
 
-gulp.task('default', ['bower', 'jade', 'sass', 'ts'], (cb) ->
+gulp.task('default', ['clean'], (cb) ->
   console.log(chalk.magenta.inverse('» Building for development...'))
-  runSequence('watch')
+  runSequence(['bower', 'jade', 'sass', 'ts', 'watch'])
 )
 
-gulp.task('del', () ->
-  #del([config.destPath+'/**/*', '!*.git'],{force: true} , function (err, deletedFiles) {
-  del.sync([config.path.destpath, '!*.git'], {force: true}, (err, deletedFiles) ->
+gulp.task('clean', () ->
+  console.log(chalk.magenta.inverse('» Deleting...'))
+  del.sync([config.path.distpath, '!*.git'], {force: true}, (err, deletedFiles) ->
     if err
       console.log(chalk.red('Error deleting files: '+err))
   )

@@ -8,11 +8,13 @@ gulpIf = require 'gulp-if'
 browserSync = require 'browser-sync'
 jade = require 'gulp-jade'
 
-gulp.task('jade', ['del'], () ->
+gulp.task('jade', () ->
   console.log(chalk.magenta.inverse('processing jade files'))
-  return gulp.src([config.path.assetspath + '/templates/**/*.jade', config.path.assetspath + '/index.jade'])
+  return gulp.src([config.path.assetspath + '/html/templates/*.jade', config.path.assetspath + '/index.jade'])
     # .pipe(sass.sync().on('error', handleErrors))
-    .pipe(jade())
+    .pipe(jade({
+      pretty: true
+    }))
     .pipe(gulp.dest(config.path.distpath))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )
