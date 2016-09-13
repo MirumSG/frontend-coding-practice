@@ -15,26 +15,32 @@ changeEvent = (evt) ->
 
 
 gulp.task('watch', ['browsersync'], () ->
-  gulp.watch([config.path.assetspath + '/img/**/*']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/assets/img/**/*']).on('change', (evt) ->
     changeEvent(evt)
-    browserSync.reload()
+    # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/**/*.jade']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/html/**/*.jade']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('jade')
-    browserSync.reload()
+    # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/sass/**/*.scss', config.path.assetspath + '/sass/**/*.sass']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/assets/sass/**/*.scss', config.path.assetspath + '/assets/sass/**/*.sass']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('sass')
-    browserSync.reload()
+    # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/ts/**/*.ts']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/assets/ts/**/*.ts']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('ts')
-    browserSync.reload()
+    # browserSync.reload()
+  )
+
+  gulp.watch([config.path.assetspath + '/spec/unit/**/*.*']).on('change', (evt) ->
+    changeEvent(evt)
+    runSequence('copy-specs')
+    # browserSync.reload()
   )
 )

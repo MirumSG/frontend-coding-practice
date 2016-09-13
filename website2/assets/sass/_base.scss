@@ -1,0 +1,41 @@
+.text-white {
+  color: $white;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-green {
+  color: $green;
+}
+
+.background-white {
+  background-color: $white;
+}
+
+.background-black {
+  background-color: $black;
+}
+
+.background-green {
+  background-color: $green;
+}
+
+.btn-buy {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+
+  @media (min-width: $screen-sm-min) {
+    min-width: $btn-buy-mobile-width;
+  }
+  @media (min-width: $screen-md-min) {
+    min-width: $btn-buy-desktop-width;
+  }
+  @media (min-width: $screen-lg-min) {
+    min-width: $btn-buy-desktop-width;
+  }
+}
+
+.btn-brand {
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}

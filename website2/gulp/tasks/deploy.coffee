@@ -14,7 +14,7 @@ gulp.task('deploy:gh-stage', () ->
       remoteUrl: 'git@github.com:MirumSG/frontend-coding-practice-tech.git',
       branch: 'master',
       cacheDir: '.release',
-      message: 'Tech relase [timestamp]'
+      message: 'Tech relase'
     }))
   console.log(chalk.pink('Deploy Successful'))
 )

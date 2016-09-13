@@ -11,9 +11,11 @@ uglify = require 'gulp-uglify'
 browserSync = require 'browser-sync'
 ts = require 'gulp-typescript'
 
-tsProject = ts.createProject('tsconfig.json')
+tsProject = ts.createProject('tsconfig.json', {
+  typescript: require('typescript')
+})
 
-gulp.task('ts', (cb) ->
+gulp.task('ts', () ->
   console.log(chalk.magenta.inverse('» Compiling ts...'))
   return gulp.src([config.path.assetspath + '/assets/ts/**/*.ts'])
     .pipe(ts(tsProject))

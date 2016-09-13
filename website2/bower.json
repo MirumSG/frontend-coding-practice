@@ -16,12 +16,18 @@
     "normalize-css": "^4.2.0",
     "underscore": "^1.8.3",
     "system.js": "^0.19.37",
-    "bootstrap-sass": "^3.3.7"
+    "bootstrap-sass": "^3.3.7",
+    "font-awesome": "fontawesome#^4.6.3"
   },
   "overrides": {
     "bootstrap-sass": {
       "main": [
         "assets/javascripts/bootstrap.min.js"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.min.css"
       ]
     }
   }

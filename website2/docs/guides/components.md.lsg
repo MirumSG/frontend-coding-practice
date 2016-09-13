@@ -1,0 +1,44 @@
+## Components
+
+### Top Bar
+
+```
+<ul class="top-bar top-bar-sm">
+  <li>
+    <div class="btn-group select-country">
+      <a class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Singapore <span class="caret"></span>
+      </a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Malaysia</a></li>
+        <li><a href="#">Hong Kong</a></li>
+        <li><a href="#">Myanmar</a></li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <a>BRAND'S World Club</a>
+  </li>
+  <li>
+    <a>Contact Us</a>
+  </li>
+  <li>
+    <i class="fa fa-search fa-2x" aria-hidden="true"></i>
+  </li>
+</ul>
+```
+
+### Navigations
+
+```
+<ul class="nav nav-brands nav-brands-sm">
+  <li><a>Our Products</a></li>
+  <li><a>Gift Bundles</a></li>
+  <li><a>What's New</a></li>
+  <li><a>The Science</a></li>
+  <li><a>Living Better</a></li>
+  <li>
+    <button type="button" class="btn btn-brand btn-sm">e-Store</button>
+  </li>
+</ul>
+```

@@ -7,7 +7,7 @@ fs = require 'fs'
 
 gulp.task('default', ['clean'], (cb) ->
   console.log(chalk.magenta.inverse('» Building for development...'))
-  runSequence(['bower', 'jade', 'sass', 'ts', 'watch'])
+  runSequence(['bower', 'copy', 'jade', 'sass', 'ts', 'watch'])
 )
 
 gulp.task('clean', () ->

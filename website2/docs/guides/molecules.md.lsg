@@ -1,0 +1,10 @@
+## Molecules
+
+### Banner
+
+```
+<div class="banner" style="background-image: url('http://placehold.it/400x400/699b44?text=')">
+  <h1>Comparing <span>4</span> Products</h1>
+  <a href="#">edit product selections</a>
+</div>
+```
