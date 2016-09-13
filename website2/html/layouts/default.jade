@@ -7,46 +7,9 @@ html
   body
     block content
     script(src="/js/vendors/system.js", type="text/javascript")
-    script(src="/js/vendors/zone.min.js", type="text/javascript")
     script.
-
-      var ProfilingZone = (function () {
-        function ProfilingZone() {
-          this.start = 0;
-          this.time = 0;
-          this.timer = performance ? performance.now.bind(performance) : Date.now.bind(Date);
-        }
-        ProfilingZone.prototype.onScheduleTask = function (parent, current, target, task) {
-          this.start = this.timer();
-          parent.scheduleTask(target, task);
-        };
-        ProfilingZone.prototype.onHasTask = function (parent, current, target, hasTask) {
-          if (!hasTask.macroTask) {
-            this.time = this.timer() - this.start;
-          }
-        };
-        ProfilingZone.prototype.benchmark = function () {
-            return Math.floor(this.time * 100) / 100 + 'ms';
-        };
-        ProfilingZone.prototype.reset = function () {
-            this.time = 0;
-        };
-        return ProfilingZone;
-      }());
-
-      var profiling = new ProfilingZone();
-      var zone = Zone.current;
-      zone.fork(profiling)
-        .run(function() {
-          System.config({
-            baseURL: '/js',
-          });
-          System.import('main.js');
-          console.log(profiling.benchmark());
-        });
-
-      //- System.config({
-      //-   baseURL: '/js',
-      //- });
-      //- System.import('main.js');
+      System.config({
+        baseURL: '/js',
+      });
+      System.import('main.js');
     block content-script

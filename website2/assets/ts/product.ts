@@ -10,7 +10,6 @@ export class Product {
 
   greet(): string {
     // $.get('https://aiaas.pandorabots.com');
-    // $('#name').html(header.greet());
     return "Hello, " + this.name;
   }
 
@@ -36,23 +35,7 @@ export class Product {
   }
 }
 
-
-zone
-  .fork({
-    'onHasTask': (parent, current, target, hasTask) => {
-       console.log('>>>>>>>>>>');
-    }
-  })
-  .run(() => {
-  let product = new Product('Product');
-  console.log("From product");
-  product.greet();
-  console.log(product);
-  profiling.reset();
-  setTimeout(() => {
-    for(var i=0;i < 10000; i++) {
-      console.log('a');
-    }
-    console.log(profiling.benchmark());
-  }, 500)
-});
+let product = new Product('Product');
+console.log("From product");
+product.greet();
+console.log(product);

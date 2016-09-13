@@ -12,9 +12,5 @@ class Header {
   }
 }
 
-zone.run(() => {
-  let header = new Header('Win');
-  $('#name').html(header.greet());
-
-  // console.log(profiling.benchmark());
-});
+let header = new Header('Win');
+$('#name').html(header.greet());
