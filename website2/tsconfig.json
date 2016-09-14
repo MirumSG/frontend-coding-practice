@@ -9,6 +9,7 @@
     "removeComments": false,
     "noImplicitAny": true,
     "isolatedModules": false,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": false
   }
 }

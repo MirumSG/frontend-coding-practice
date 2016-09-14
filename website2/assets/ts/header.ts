@@ -1,5 +1,5 @@
 import * as $ from 'jquery';
-System.import('bootstrap');
+import 'bootstrap';
 
 class Header {
   name: string;

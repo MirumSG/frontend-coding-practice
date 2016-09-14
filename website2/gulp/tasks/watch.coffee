@@ -38,6 +38,12 @@ gulp.task('watch', ['browsersync'], () ->
     # browserSync.reload()
   )
 
+  gulp.watch([config.path.assetspath + '/spec/**/*.ts']).on('change', (evt) ->
+    changeEvent(evt)
+    runSequence('compile-specs')
+    # browserSync.reload()
+  )
+
   gulp.watch([config.path.assetspath + '/spec/unit/**/*.*']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('copy-specs')

@@ -1,11 +1,14 @@
 import * as $ from 'jquery';
-System.import('bootstrap');
+import 'bootstrap';
+
+import { Common } from './shared';
 
 export class Product {
   name: string;
 
   constructor(name: string) {
     this.name = name;
+    console.log(Common.test());
   }
 
   greet(): string {
@@ -30,12 +33,12 @@ export class Product {
     //     defer.reject(error);
     //   });
     defer.resolve(sampleDiv);
-    // defer.reject(error);
+
     return defer.promise();
   }
+
 }
 
 let product = new Product('Product');
-console.log("From product");
 product.greet();
-console.log(product);
+product.render();
