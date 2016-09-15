@@ -8,7 +8,13 @@ tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript')
 })
 
-gulp.task('copy', ['copy-fonts', 'copy-nodemodule', 'compile-specs'])
+gulp.task('copy', ['copy-fonts', 'copy-images', 'copy-nodemodule', 'compile-specs'])
+
+gulp.task('copy-images', () ->
+  console.log(chalk.magenta.inverse('Copying images'));
+  gulp.src([config.path.assetspath + '/assets/images/**/*.*'])
+    .pipe(gulp.dest(config.path.distpath + '/images'))
+)
 
 gulp.task('copy-fonts', () ->
   console.log(chalk.magenta.inverse('Copying fonts'));
