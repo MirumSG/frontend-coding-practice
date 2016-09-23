@@ -20,9 +20,9 @@ gulp.task('watch', ['browsersync'], () ->
     # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/html/**/*.jade']).on('change', (evt) ->
+  gulp.watch([config.path.assetspath + '/html/**/*.pug']).on('change', (evt) ->
     changeEvent(evt)
-    runSequence('jade')
+    runSequence('pug')
     # browserSync.reload()
   )
 

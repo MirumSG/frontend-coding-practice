@@ -6,13 +6,13 @@ runSequence = require 'run-sequence'
 handleErrors = require '../util/handleErrors'
 gulpIf = require 'gulp-if'
 browserSync = require 'browser-sync'
-jade = require 'gulp-jade'
+pug = require 'gulp-pug'
 
-gulp.task('jade', () ->
-  console.log(chalk.magenta.inverse('processing jade files'))
-  return gulp.src([config.path.assetspath + '/html/templates/*.jade', config.path.assetspath + '/index.jade'])
+gulp.task('pug', () ->
+  console.log(chalk.magenta.inverse('processing pug files'))
+  return gulp.src([config.path.assetspath + '/html/templates/*.pug', config.path.assetspath + '/index.pug'])
     # .pipe(sass.sync().on('error', handleErrors))
-    .pipe(jade({
+    .pipe(pug({
       pretty: true
     }))
     .pipe(gulp.dest(config.path.distpath))
