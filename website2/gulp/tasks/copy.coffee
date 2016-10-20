@@ -10,16 +10,24 @@ tsProject = ts.createProject('tsconfig.json', {
 
 gulp.task('copy', ['copy-fonts', 'copy-images', 'copy-nodemodule', 'compile-specs'])
 
+gulp.task('copy-dummydata', () ->
+  console.log(chalk.magenta.inverse('Copying dummy data'));
+  gulp.src([config.path.assetspath + '/dummy-data/**/*.*'])
+    .pipe(gulp.dest(config.path.distpath + '/dummy-data/'))
+)
+
 gulp.task('copy-images', () ->
   console.log(chalk.magenta.inverse('Copying images'));
   gulp.src([config.path.assetspath + '/assets/images/**/*.*'])
-    .pipe(gulp.dest(config.path.distpath + '/images'))
+    .pipe(gulp.dest(config.path.distpath + '/' + config.lang + '/images'))
 )
 
 gulp.task('copy-fonts', () ->
   console.log(chalk.magenta.inverse('Copying fonts'));
   gulp.src([config.path.libspath + '/font-awesome/**/**/*-webfont.*'])
-    .pipe(gulp.dest(config.path.distpath))
+    .pipe(gulp.dest(config.path.distpath + '/' + config.lang))
+  gulp.src([config.path.assetspath + '/assets/fonts/**/*'])
+    .pipe(gulp.dest(config.path.distpath + '/' + config.lang + '/fonts'))
 )
 
 gulp.task('copy-nodemodule', () ->
