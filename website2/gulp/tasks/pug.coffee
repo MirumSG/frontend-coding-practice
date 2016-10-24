@@ -11,10 +11,10 @@ pug = require 'gulp-pug'
 gulp.task('pug', () ->
   console.log(chalk.magenta.inverse('processing pug files'))
   return gulp.src([config.path.assetspath + '/html/templates/*.pug', config.path.assetspath + '/index.pug'])
-    # .pipe(sass.sync().on('error', handleErrors))
     .pipe(pug({
       pretty: true
     }))
+    .on('error', handleErrors)
     .pipe(gulp.dest(config.path.distpath))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )
