@@ -1,6 +1,7 @@
 /// <reference path="../../dts/declaration.d.ts" />
 
 System.config({
+  baseURL: baseUrl,
   // defaultJSExtensions: true,
   packages: {
     'shared': {
