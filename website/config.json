@@ -1,11 +1,13 @@
 {
-  "projName": "malaysia-airline",
-  "destPath": ".",
+  "projName": "frontend2",
+  "destPath": "/dist",
   "path": {
-    "servepath": ".",
-    "stagepath": "./stage",
-    "distpath": "dist",
-    "assetspath": "/etc/designs/mas"
+    "assetspath": ".",
+    "distpath": "./dist",
+    "jadepath": ".",
+    "jspath": "./js",
+    "csspath": "./css",
+    "libspath": "./assets/vendors"
   },
   "server": {
     "lrStarted": false,

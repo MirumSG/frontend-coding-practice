@@ -9,10 +9,12 @@ gulp.task('deploy:stage', () ->
 )
 
 gulp.task('deploy:gh-stage', () ->
-  return gulp.src(config.path.stagepath+'/**/*')
+  return gulp.src(config.path.distpath+'/**/*')
     .pipe(ghPages({
-      branch: 'release',
-      cacheDir: '.release'
+      remoteUrl: 'git@github.com:MirumSG/frontend-coding-practice-tech.git',
+      branch: 'master',
+      cacheDir: '.release',
+      message: 'Tech relase'
     }))
   console.log(chalk.pink('Deploy Successful'))
 )
