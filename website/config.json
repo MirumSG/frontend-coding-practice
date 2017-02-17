@@ -1,12 +1,19 @@
 {
   "projName": "frontend2",
   "destPath": "/dist",
+  "lang": "en",
+  "supportedLangs": [
+    "my",
+    "zh",
+    "th"
+  ],
   "path": {
     "assetspath": ".",
     "distpath": "./dist",
     "jadepath": ".",
-    "jspath": "./js",
-    "csspath": "./css",
+    "jspath": "/clientlib-site/js",
+    "csspath": "/clientlib-site/css",
+    "copypath": "/clientlib-site/",
     "libspath": "./assets/vendors"
   },
   "server": {
