@@ -8,7 +8,7 @@ tsProject = ts.createProject('tsconfig.json', {
   typescript: require('typescript')
 })
 
-gulp.task('copy', ['copy-fonts', 'copy-images', 'copy-nodemodule', 'compile-specs'])
+gulp.task('copy', ['copy-dummydata', 'copy-fonts', 'copy-images', 'copy-nodemodule', 'compile-specs'])
 
 gulp.task('copy-dummydata', () ->
   console.log(chalk.magenta.inverse('Copying dummy data'));
@@ -19,21 +19,21 @@ gulp.task('copy-dummydata', () ->
 gulp.task('copy-images', () ->
   console.log(chalk.magenta.inverse('Copying images'));
   gulp.src([config.path.assetspath + '/assets/images/**/*.*'])
-    .pipe(gulp.dest(config.path.distpath + '/' + config.lang + '/images'))
+    .pipe(gulp.dest(config.path.distpath + config.path.copypath + 'images'))
 )
 
 gulp.task('copy-fonts', () ->
   console.log(chalk.magenta.inverse('Copying fonts'));
   gulp.src([config.path.libspath + '/font-awesome/**/**/*-webfont.*'])
-    .pipe(gulp.dest(config.path.distpath + '/' + config.lang))
+    .pipe(gulp.dest(config.path.distpath + config.path.copypath))
   gulp.src([config.path.assetspath + '/assets/fonts/**/*'])
-    .pipe(gulp.dest(config.path.distpath + '/' + config.lang + '/fonts'))
+    .pipe(gulp.dest(config.path.distpath + config.path.copypath + 'fonts'))
 )
 
 gulp.task('copy-nodemodule', () ->
   console.log(chalk.magenta.inverse('Copying node module'));
   gulp.src([config.path.assetspath + '/node_modules/zone.js/dist/zone.min.js'])
-    .pipe(gulp.dest(config.path.distpath + '/js/vendors'))
+    .pipe(gulp.dest(config.path.distpath + config.path.jspath + '/vendors'))
 )
 
 gulp.task('compile-specs', ['copy-specs'], () ->

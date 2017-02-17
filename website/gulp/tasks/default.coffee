@@ -10,6 +10,11 @@ gulp.task('default', ['clean'], (cb) ->
   runSequence(['bower', 'copy', 'pug', 'sass', 'ts', 'watch'])
 )
 
+gulp.task('release', ['deploy:gh-stage'], (cb) ->
+  console.log(chalk.magenta.inverse('» Deployed...'))
+  # runSequence(['bower', 'copy', 'imagemin', 'pug', 'sass', 'ts'])
+)
+
 gulp.task('clean', () ->
   console.log(chalk.magenta.inverse('» Deleting...'))
   del.sync([config.path.distpath, '!*.git'], {force: true}, (err, deletedFiles) ->

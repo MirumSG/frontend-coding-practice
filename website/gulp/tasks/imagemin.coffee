@@ -14,8 +14,9 @@ gulp.task('imgOptimise', () ->
 )
 
 gulp.task('imagemin', () ->
-  console.log(chalk.magenta.inverse('» Image min images ans SVG...'+config.path.destPath + config.path.assetspath + '/img/**/*'))
-  return gulp.src([config.path.servepath + config.path.assetspath + '/img/**/*', '!'+config.path.servepath + config.path.assetspath + '/img/svg/symbol-defs.svg'])
+
+  console.log(chalk.magenta.inverse('» Image min images ans SVG...' + config.path.assetspath + 'images/**/*'))
+  return gulp.src([config.path.assetspath + '/assets/images/**/*.*', '!'+config.path.assetspath + '/assets/images/**/*.svg'])
     .on('error', handleErrors)
     .pipe(imagemin({
       cache: false,
@@ -23,5 +24,5 @@ gulp.task('imagemin', () ->
       svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()]
     }))
-    .pipe(gulp.dest(config.path.stagepath + config.path.assetspath + '/img')) # output directory
+    .pipe(gulp.dest(config.path.distpath + config.path.copypath + 'images/')) # output directory
 )

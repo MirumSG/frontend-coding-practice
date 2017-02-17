@@ -19,6 +19,6 @@ gulp.task('ts', () ->
   console.log(chalk.magenta.inverse('» Compiling ts...'))
   return gulp.src([config.path.assetspath + '/assets/ts/**/*.ts'])
     .pipe(ts(tsProject))
-    .pipe(gulp.dest(config.path.distpath + '/js'))
+    .pipe(gulp.dest(config.path.distpath + config.path.jspath))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )
