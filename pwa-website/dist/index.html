@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <link href="./clientlib-site/css/all.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <!-- header component start here-->
+      <div class="row">
+        <div class="col-lg-9">
+          <!-- menu molecule start here-->
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Brand</a>
+              </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="./about.html">About<span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider" role="separator"></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li class="divider" role="separator"></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                  <!-- search molecule start here-->
+                  <div class="form-group">
+                    <input class="form-control" type="text" placeholder="Search">
+                  </div>
+                  <button class="btn btn-default" type="submit">Submit</button>
+                  <!-- search molecule end here-->
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider" role="separator"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <!-- menu molecule start here-->
+        </div>
+        <div class="col-lg-3">
+          <!-- country molecule start here-->
+          <div class="btn-group">
+            <button class="btn btn-default dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Country<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Singapore</a></li>
+              <li><a href="#">Myanmar</a></li>
+              <li><a href="#">Hong Kong</a></li>
+              <li><a href="#">Taiwan</a></li>
+              <li><a href="#">Malaysia</a></li>
+            </ul>
+          </div>
+          <!-- country molecule end here-->
+        </div>
+      </div>
+      <!-- header component end here-->
+      <h2>Home page</h2>
+      <div class="well" id="name"></div>
+      <!-- product component start here-->
+      <div class="row">
+        <!-- product-info molecule start here-->
+        <div class="col-xs-12 col-sm-6"><img class="img-responsive product-image-large" src="http://contents.louisvuitton.com/is/image/lv/1/PP_VP_M/louis-vuitton-turenne-pm-monogram-canvas-handbags--M48813_PM2_Front%20view.jpg?wid=639&amp;hei=639"></div>
+        <div class="col-xs-12 col-sm-6">
+          <h3 id="product-title">TURENNE PM</h3>
+          <div class="well row">
+            <div class="input-group">
+              <div class="input-group-addon">Quantity:</div>
+              <input class="form-control" id="exampleInputAmount" type="text" placeholder="Amount">
+              <div class="input-group-addon">x 900 Points each</div>
+            </div>
+            <div class="input-group" style="margin-top:12px">
+              <div class="input-group-addon">Color:</div>
+              <select class="form-control">
+                <option>Brown and Gold</option>
+                <option>White and Silver</option>
+              </select>
+            </div>
+          </div>
+          <h4>Description</h4>
+          <p>Fully lined interior with zipper accessory pocket, metal feet on bottom to protect bag, accented with polished nickel hardware. Zippers top opening. 20.5 inch width x 12.5 inch height x 5.5 inch depth. ALG188</p>
+        </div>
+        <!-- product-info molecule end here-->
+        <!-- product-action molecule start here-->
+        <div class="btn-group" role="group" aria-label="..." style="margin-bottom:10px">
+          <button class="btn btn-default btn-success" type="button"><span class="fa fa-plus"></span> Add to Cart</button>
+          <button class="btn btn-default btn-info" type="button"><span class="fa fa-shopping-cart"></span> Checkout</button>
+          <button class="btn btn-default btn-danger" type="button"><span class="fa fa-close"></span> Cancel</button>
+        </div>
+        <!-- product-action molecule end here-->
+      </div>
+      <!-- product component end here-->
+      <div class="sprite-run"></div>
+    </div>
+    <script>var baseUrl = '/js';</script>
+    <script src="/js/vendors/system.js" type="text/javascript"></script>
+    <script src="/js/main.js" type="text/javascript"></script>
+    <script>
+      SystemJS.import('header.js');
+      SystemJS.import('product.js');
+    </script>
+  </body>
+</html>

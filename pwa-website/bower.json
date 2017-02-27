@@ -1,0 +1,64 @@
+{
+  "name": "Mirum Frontend2",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.12.0",
+    "underscore": "1.8.3",
+    "system.js": "~0.20.9",
+    "bootstrap-sass": "~3.3.7",
+    "Swiper": "swiper#3.4.1",
+    "svgxuse": "~1.2.1",
+    "retinajs": "~2.1.0",
+    "magnific-popup": "~1.1.0",
+    "vue": "^2.1.10"
+  },
+  "overrides": {
+    "vue": {
+      "main": [
+        "dist/vue.min.js"
+      ]
+    },
+    "system.js": {
+      "main": [
+        "dist/system.js",
+        "dist/system-polyfills.js"
+      ]
+    },
+    "bootstrap-sass": {
+      "main": [
+        "assets/javascripts/bootstrap.min.js"
+      ]
+    },
+    "Swiper": {
+      "main": [
+        "dist/css/swiper.min.css",
+        "dist/js/swiper.min.js"
+      ]
+    },
+    "svgxuse": {
+      "main": [
+        "svgxuse.min.js"
+      ]
+    },
+    "retinajs": {
+      "main": [
+        "dist/retina.min.js"
+      ]
+    },
+    "magnific-popup": {
+      "main": [
+        "dist/jquery.magnific-popup.min.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,74 @@
+## Base
+
+### Text Colors
+
+```
+<ul class="base-text-color">
+  <li>
+    <div class="text-white">.text-white</div>
+  </li>
+  <li>
+    <div class="text-black">.text-black</div>
+  </li>
+  <li>
+    <div class="text-green">.text-green</div>
+  </li>
+</ul>
+```
+
+### Background Colors
+
+```
+<ul class="base-background-color">
+  <li class="background-white">
+    <div>.background-white</div>
+  </li>
+  <li class="background-black">
+    <div>.background-black</div>
+  </li>
+  <li class="background-green">
+    <div>.background-green</div>
+  </li>
+</ul>
+```
+
+### Grid
+
+[Boostrap Grid](http://getbootstrap.com/css/#grid)
+
+### Table
+
+[Boostrap Table](http://getbootstrap.com/css/#table)
+
+### Typography
+
+[Boostrap Typography](http://getbootstrap.com/css/#type)
+
+### Buttons
+
+```
+<button type="button" class="btn btn-default btn-sm">Default</button>
+```
+```
+<button type="button" class="btn btn-success btn-sm">Success</button>
+```
+```
+<button type="button" class="btn btn-warning btn-sm">Warning</button>
+```
+```
+<button type="button" class="btn btn-danger btn-sm">Danger</button>
+```
+```
+<button type="button" class="btn btn-buy btn-sm">Buy</button>
+```
+```
+<button type="button" class="btn btn-brand">Compare</button>
+<button type="button" class="btn btn-brand">e-Store</button>
+<button type="button" class="btn btn-brand">Select Product</button>
+<button type="button" class="btn btn-brand"><i class="fa fa-phone"></i> 1800 732 4748</button>
+```
+
+### Forms
+
+[Boostrap Forms](http://getbootstrap.com/css/#Forms)
+

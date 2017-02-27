@@ -1,0 +1,48 @@
+.banner {
+  width: 100%;
+  min-height: 200px;
+  color: $white;
+  text-align: center;
+  padding-top: 50px;
+  h1 {
+    span {
+      font-weight: bold;
+    }
+  }
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}
+
+.sprite-run {
+  height: 294px;
+  width: 165px;
+  background-image: url(/images/sprite-run.png);
+  background-position: 0 0;
+
+  // @include animation('move-the-object .5s 1', 'move-the-object-again .5s 1 .5s');
+
+  animation-name: run-x, run-y;
+  animation-duration: 0.4s, 2.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(12), steps(6);
+
+  @include keyframes(run-x) {
+    from {
+      background-position-x: 0;
+    }
+    to {
+      background-position-x: -1980px;
+    }
+  }
+
+  @include keyframes(run-y) {
+    from {
+      background-position-y: 0;
+    }
+    to {
+      background-position-y: -1764px;
+    }
+  }
+}

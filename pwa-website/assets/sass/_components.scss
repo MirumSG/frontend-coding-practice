@@ -1,0 +1,38 @@
+ul.top-bar {
+  background-color: $black;
+  li {
+    display: inline-block;
+    font-size: $font-size-small;
+    padding: 0px 10px 0px 10px;
+    vertical-align: middle;
+    a, i {
+      color: $white;
+    }
+    .select-country {
+      .dropdown-menu {
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+.top-bar-sm {
+  @include top-bar-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}
+
+ul.nav-brands {
+  li {
+    display: inline-block;
+    padding: 0px 10px 0px 10px;
+    a {
+      color: $black;
+      font-size: $font-size-small;
+    }
+  }
+}
+
+.nav-brands-sm {
+  @include top-bar-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+}

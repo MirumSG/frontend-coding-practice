@@ -1,0 +1,13 @@
+block variables
+doctype html
+html
+  head
+    title= title
+    link(href="./clientlib-site/css/all.css", type="text/css", rel="stylesheet")
+  body
+    block content
+    script.
+      var baseUrl = '/js';
+    script(src="/js/vendors/system.js", type="text/javascript")
+    script(src="/js/main.js", type="text/javascript")
+    block content-script
