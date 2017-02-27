@@ -1,38 +1,21 @@
-ul.top-bar {
-  background-color: $black;
-  li {
-    display: inline-block;
-    font-size: $font-size-small;
-    padding: 0px 10px 0px 10px;
-    vertical-align: middle;
-    a, i {
-      color: $white;
-    }
-    .select-country {
-      .dropdown-menu {
-        a {
-          color: $black;
-        }
-      }
-    }
+@import 'components/header';
+
+.component-container {
+  @import 'components/component-container';
+
+  .background-container {
+    @import 'components/background-container';
+  }
+
+  .column-control { // container-fluid or container of bootstrap
+    @import 'components/column-control';
   }
 }
 
-.top-bar-sm {
-  @include top-bar-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+.primary-color {
+  @include primaryColor();
 }
 
-ul.nav-brands {
-  li {
-    display: inline-block;
-    padding: 0px 10px 0px 10px;
-    a {
-      color: $black;
-      font-size: $font-size-small;
-    }
-  }
-}
-
-.nav-brands-sm {
-  @include top-bar-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+.secondary-color {
+  @include secondaryColor();
 }

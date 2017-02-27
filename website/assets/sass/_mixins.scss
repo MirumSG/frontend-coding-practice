@@ -1,15 +1,27 @@
-@mixin nav-brands-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
+@mixin primaryColor($type:false) {
+  @if($type == false) {
+    color: $primary-color;
+  }
+  @else if($type == 'icon') {
+    stroke: $primary-color;
+    fill: $primary-color;
+  }
+  @else if($type == 'bg') {
+    background-color: $primary-color
+  }
 }
 
-@mixin top-bar-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
-  padding: $padding-vertical $padding-horizontal;
-  font-size: $font-size;
-  line-height: $line-height;
-  border-radius: $border-radius;
+@mixin secondaryColor($type:false) {
+  @if($type == false) {
+    color: $secondary-color;
+  }
+  @else if($type == 'icon') {
+    stroke: $secondary-color;
+    fill: $secondary-color;
+  }
+  @else if($type == 'bg') {
+    background-color: $secondary-color
+  }
 }
 
 @mixin animation($animate...) {

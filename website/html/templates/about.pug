@@ -2,11 +2,11 @@ extends ../layouts/default
 block variables
   - var title = "About"
 block content
-  div.container
-    include ../components/header
-    h2 About page
+  include ../components/header
+  +h1("About page")
+  div.component-container
     div.well#about
-    include ../components/footer
+  include ../components/footer
 append content-script
   script.
     SystemJS.import('header.js');

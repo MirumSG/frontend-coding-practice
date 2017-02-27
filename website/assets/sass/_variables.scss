@@ -1,8 +1,27 @@
-// colors
+$primary-color: #000;
+$secondary-color: #fff;
 
-$white:                   #fff;
-$black:                   #000;
-$green:                   #3E810C;
+$default-font-size:            100%;
+$default-font-size-xs:         80%;
 
-$btn-buy-desktop-width:   200px;
-$btn-buy-mobile-width:    100px;
+$h1-font-size:              100rem;
+$h1-font-size-xs:           50rem;
+$h2-font-size:              50rem;
+$h2-font-size-xs:           35rem;
+$h3-font-size:              35rem;
+$h3-font-size-xs:           25rem;
+$h4-font-size:              25rem;
+$h4-font-size-xs:           21rem;
+$h5-font-size:              25rem;
+$h5-font-size-xs:           21rem;
+$h6-font-size:              25rem;
+$h6-font-size-xs:           21rem;
+
+$heading-margin:            40px auto;
+$heading-margin-xs:            40px auto;
+
+$component-container-margin:  80px auto;
+$component-container-margin-xs:  40px auto;
+
+$background-container-padding:  80px 0px;
+$background-container-padding-xs:  40px 0px;
