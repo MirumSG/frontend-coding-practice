@@ -1,5 +1,35 @@
-mixin h1(title, additionalClass)
-  h1(class=additionalClass)!= title
+mixin h1(args)
+  - args = args || {};
+  h1(class=args.additionalClass)!= args.title
 
-mixin img(title, additionalClass)
-  img(class=additionalClass, alt=title, title=title)
+mixin h2(args)
+  - args = args || {};
+  h2(class=args.additionalClass)!= args.title
+
+mixin h3(args)
+  - args = args || {};
+  h3(class=args.additionalClass)!= args.title
+
+mixin h4(args)
+  - args = args || {};
+  h4(class=args.additionalClass)!= args.title
+
+mixin h5(args)
+  - args = args || {};
+  h5(class=args.additionalClass)!= args.title
+
+mixin h6(args)
+  - args = args || {};
+  h6(class=args.additionalClass)!= args.title
+
+mixin p(args)
+  - args = args || {};
+  p(class=args.additionalClass)!= args.title
+
+mixin a(args)
+  - args = args || {};
+  a(class=args.additionalClass, href=args.href)!= args.title
+
+mixin img(args)
+  - args = args || {};
+  img.img-responsive(class=args.additionalClass, alt=args.title, title=args.title, src=args.src)
