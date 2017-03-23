@@ -12,7 +12,7 @@ gulp.task('default', ['clean'], (cb) ->
 
 gulp.task('release', ['deploy:gh-stage'], (cb) ->
   console.log(chalk.magenta.inverse('» Deployed...'))
-  # runSequence(['bower', 'copy', 'imagemin', 'pug', 'sass', 'ts'])
+  runSequence(['bower', 'copy', 'imagemin', 'pug', 'sass', 'ts'])
 )
 
 gulp.task('clean', () ->
