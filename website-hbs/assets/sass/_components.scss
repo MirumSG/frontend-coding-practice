@@ -1,0 +1,21 @@
+@import 'components/header';
+
+.component-container {
+  @import 'components/component-container';
+
+  .background-container {
+    @import 'components/background-container';
+  }
+
+  .column-control { // container-fluid or container of bootstrap
+    @import 'components/column-control';
+  }
+}
+
+.primary-color {
+  @include primaryColor();
+}
+
+.secondary-color {
+  @include secondaryColor();
+}

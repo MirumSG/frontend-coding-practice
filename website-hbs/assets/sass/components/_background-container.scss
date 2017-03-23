@@ -1,0 +1,13 @@
+&.background-cover {
+  background-size: cover;
+  background-position: center;
+}
+
+&.background-cover-center-bottom {
+  background-size: cover;
+  background-position: center bottom;
+}
+
+&.background-primary-color {
+  @include primaryColor('bg')
+}

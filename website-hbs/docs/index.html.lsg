@@ -1,0 +1,44 @@
+@sass ../assets/sass/brands-bootstrap.scss
+@sass ../assets/vendors/font-awesome/scss/font-awesome.scss
+
+@title Frontend Living Style Guide
+
+@header {
+  <style type="text/css">
+    .lsg-headline {
+      font-size: 28px !important;
+    }
+
+    .base-text-color, .base-background-color {
+      list-style: none;
+    }
+    .base-text-color li {
+      width: 80px;
+      height: 80px;
+      background-color: #ccc;
+      display: -webkit-inline-box;
+    }
+    .base-background-color li {
+      width: 80px;
+      height: 80px;
+      display: -webkit-inline-box;
+    }
+    .base-text-color li div, .base-background-color li div {
+      margin: auto;
+      position: relative;
+      top: 40%;
+      text-align: center;
+    }
+  </style>
+}
+
+@import guides/*.md.lsg
+
+@javascript-after /js/vendors/jquery.js
+@javascript-after /js/vendors/bootstrap.min.js
+
+@javascript-after {
+  $(document).ready(function(){
+    $('.dropdown-toggle').dropdown();
+  });
+}

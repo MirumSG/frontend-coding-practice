@@ -1,0 +1,8 @@
+.icon-container {
+  &.primary-icon {
+    @include primaryColor('icon');
+  }
+  &.secondary-icon {
+    @include secondaryColor('icon');
+  }
+}
