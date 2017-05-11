@@ -11,7 +11,7 @@ gulp.task('deploy:stage', () ->
 
 gulp.task('deploy:gh-stage', ['build'], () ->
   console.log(chalk.magenta.inverse('» Deploying to github'))
-  return gulp.src(config.path.distpath+'/clientlib-site/**/*')
+  return gulp.src(config.path.dist + '/**/*')
     .pipe(ghPages({
       # remoteUrl: 'git@github.com:MirumSG/BrandsWorld-RMD.git',
       branch: 'tech',

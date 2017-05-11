@@ -36,7 +36,7 @@ gulp.task('svg', () ->
 
         if (xml.svg.g && xml.svg.g[0])
           recursiveG(xml.svg.g);
-        
+
         # if(xml.svg.g[0].$.stroke == 'none')
         #   xml.svg.g[0].$.stroke = '';
         # if(xml.svg.g[0].$.fill == 'none')
@@ -64,7 +64,7 @@ gulp.task('svg', () ->
       file.basename = 'symbol-defs'
     ))
     .on('error', handleErrors)
-    .pipe(gulp.dest(config.path.assetspath + '/assets/images/icons/')) # output directory
-    .pipe(gulp.dest(config.path.distpath + config.path.copypath + 'images/icons/')) # output directory
+    .pipe(gulp.dest(config.path.src + '/assets/images/icons/')) # output directory
+    .pipe(gulp.dest(config.path.dist + config.path.etc_designs + config.projName + '/assets/images/icons/')) # output directory
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )

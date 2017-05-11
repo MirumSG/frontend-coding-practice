@@ -17,8 +17,8 @@ tsProject = ts.createProject('tsconfig.json', {
 
 gulp.task('ts', () ->
   console.log(chalk.magenta.inverse('» Compiling ts...'))
-  return gulp.src([config.path.assetspath + '/assets/ts/**/*.ts'])
+  return gulp.src([config.path.src + '/assets/ts/**/*.ts'])
     .pipe(ts(tsProject))
-    .pipe(gulp.dest(config.path.distpath + config.path.jspath))
+    .pipe(gulp.dest(config.path.dist + config.path.etc_designs + config.projName + '/assets/js'))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )

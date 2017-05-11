@@ -11,40 +11,40 @@ runSequence = require 'run-sequence'
 ###
 
 changeEvent = (evt) ->
-  gutil.log('File', gutil.colors.cyan(evt.path.replace(new RegExp('/.*(?=/' + config.path.assetspath + ')/'), '')), 'was', gutil.colors.magenta(evt.type))
+  gutil.log('File', gutil.colors.cyan(evt.path.replace(new RegExp('/.*(?=/' + config.path.src + ')/'), '')), 'was', gutil.colors.magenta(evt.type))
 
 
 gulp.task('watch', ['browsersync'], () ->
-  gulp.watch([config.path.assetspath + '/assets/img/**/*']).on('change', (evt) ->
+  gulp.watch([config.path.src + '/assets/img/**/*']).on('change', (evt) ->
     changeEvent(evt)
     # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/html/**/*.pug']).on('change', (evt) ->
+  gulp.watch([config.path.src + '/html/**/*.pug']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('pug')
     # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/assets/sass/**/*.scss', config.path.assetspath + '/assets/sass/**/*.sass']).on('change', (evt) ->
+  gulp.watch([config.path.src + '/assets/sass/**/*.scss', config.path.src + '/assets/sass/**/*.sass']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('sass')
     # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/assets/ts/**/*.ts']).on('change', (evt) ->
+  gulp.watch([config.path.src + '/assets/ts/**/*.ts']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('ts')
     # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/spec/**/*.ts']).on('change', (evt) ->
+  gulp.watch([config.path.src + '/spec/**/*.ts']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('compile-specs')
     # browserSync.reload()
   )
 
-  gulp.watch([config.path.assetspath + '/spec/unit/**/*.*']).on('change', (evt) ->
+  gulp.watch([config.path.src + '/spec/unit/**/*.*']).on('change', (evt) ->
     changeEvent(evt)
     runSequence('copy-specs')
     # browserSync.reload()

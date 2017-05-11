@@ -15,20 +15,20 @@ gulp.task('minify', ['minify-js', 'minify-css'], (cb) ->
 
 gulp.task('minify-js', (cb) ->
   console.log(chalk.magenta.inverse('» Uglifying JS...'))
-  return gulp.src([config.path.distpath+'/clientlib-site/js/**/*.js', '!'+config.path.distpath+'/clientlib-site/js/**/*.min.js'])
+  return gulp.src([config.path.dist + config.path.etc_designs + '/**/js/**/*.js', '!' + config.path.dist + config.path.etc_designs + '/**/js/**/*.min.js'])
     .pipe(uglify())
     .pipe(rename (path) -> path.extname = '.min.js')
-    .pipe(gulp.dest(config.path.distpath + config.path.jspath))
+    .pipe(gulp.dest(config.path.dist + config.path.etc_designs + config.projName))
 )
 
 gulp.task('minify-css', (cb) ->
   console.log(chalk.magenta.inverse('» Uglifying CSSS...'))
-  return gulp.src([config.path.distpath+'/clientlib-site/css/**/*.css', '!'+config.path.distpath+'/clientlib-site/css/**/*.min.css'])
+  return gulp.src([config.path.dist + config.path.etc_designs + '/**/css/**/*.css', '!' + config.path.dist + config.path.etc_designs + '/**/css/**/*.min.css'])
     .pipe(cleanCss({
       processImport: false
       }))
     .pipe(rename (path) -> path.extname = '.min.css')
-    .pipe(gulp.dest(config.path.distpath + config.path.csspath))
+    .pipe(gulp.dest(config.path.dist + config.path.etc_designs + config.projName))
 )
 
 gulp.task('build', ['clean'], (cb) ->

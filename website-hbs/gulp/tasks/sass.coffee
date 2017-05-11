@@ -22,29 +22,19 @@ gulp.task('sass', () ->
   p = new promise()
 
   plist = [
-    gulp.src([config.path.assetspath + '/assets/sass/project-bootstrap.scss'])
-      .pipe(sass.sync({ includePaths: [config.path.libspath + '/bootstrap-sass/assets/stylesheets'] }).on('error', handleErrors))
+    gulp.src([config.path.src + '/assets/sass/project-bootstrap.scss'])
+      .pipe(sass.sync({ includePaths: [config.path.vendors + '/bootstrap-sass/assets/stylesheets'] }).on('error', handleErrors))
       .pipe(postcss(processors))
       .pipe(concat('all.css'))
-      .pipe(gulp.dest(config.path.distpath + config.path.csspath))
+      .pipe(gulp.dest(config.path.dist + config.path.etc_designs + config.projName + '/assets/css'))
       .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})))
-    gulp.src([config.path.assetspath + '/assets/sass/project-bootstrap.docs.scss'])
+    gulp.src([config.path.src + '/assets/sass/project-bootstrap.docs.scss'])
       .pipe(sass.sync({ includePaths: [config.path.libspath + '/project-sass/assets/stylesheets'] }).on('error', handleErrors))
       .pipe(postcss(processors))
       .pipe(concat('all-docs.css'))
-      .pipe(gulp.dest(config.path.distpath + config.path.csspath))
+      .pipe(gulp.dest(config.path.dist + config.path.etc_designs + config.projName + '/assets/css'))
       .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})))
     ]
-
-  buildPromiseList = (lang) ->
-    plist.push(gulp.src([config.path.assetspath + "/assets/sass/project-bootstrap-#{lang}.scss"])
-      .pipe(sass.sync({ includePaths: [config.path.libspath + '/bootstrap-sass/assets/stylesheets'] }).on('error', handleErrors))
-      .pipe(postcss(processors))
-      .pipe(concat("all-#{lang}.css"))
-      .pipe(gulp.dest(config.path.distpath + config.path.csspath))
-      .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));)
-
-  buildPromiseList lang for lang in config.supportedLangs
 
   p.makePromises plist
 )

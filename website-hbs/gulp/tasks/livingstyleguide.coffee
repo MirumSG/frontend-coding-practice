@@ -10,8 +10,8 @@ lsg = require 'gulp-livingstyleguide'
 
 gulp.task('lsg', () ->
   console.log(chalk.magenta.inverse('processing lsg files'))
-  return gulp.src([config.path.assetspath + '/docs/index.html.lsg'])
+  return gulp.src([config.path.src + '/docs/index.html.lsg'])
     .pipe(lsg())
-    .pipe(gulp.dest(config.path.distpath + '/docs'))
+    .pipe(gulp.dest(config.path.dist + '/docs'))
     .pipe(gulpIf(config.server.lrStarted, browserSync.reload({stream:true})));
 )

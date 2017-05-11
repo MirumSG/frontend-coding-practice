@@ -13,7 +13,7 @@ gulp.task('browsersync', () ->
   # Serve files and connect browsers
   browserSync({
     server: {
-      baseDir: config.path.distpath
+      baseDir: config.path.dist
     },
     logConnections: false,
     debugInfo: false,

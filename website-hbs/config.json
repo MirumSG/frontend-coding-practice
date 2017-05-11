@@ -1,20 +1,12 @@
 {
-  "projName": "frontend2",
-  "destPath": "/dist",
+  "projName": "pphgglobal",
   "lang": "en",
-  "supportedLangs": [
-    "my",
-    "zh",
-    "th"
-  ],
   "path": {
-    "assetspath": ".",
-    "distpath": "./dist",
-    "jadepath": ".",
-    "jspath": "/clientlib-site/js",
-    "csspath": "/clientlib-site/css",
-    "copypath": "/clientlib-site/",
-    "libspath": "./assets/vendors"
+    "src": ".",
+    "dist": "./jcr_root",
+    "etc_designs": "/etc/designs/",
+    "apps": "/apps/",
+    "vendors": "/assets/vendors/"
   },
   "server": {
     "lrStarted": false,

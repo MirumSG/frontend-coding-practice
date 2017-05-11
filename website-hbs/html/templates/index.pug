@@ -2,11 +2,11 @@ extends ../layouts/default
 block variables
   - var title = "Home"
 block content
-  include ../components/header
+  include ../components/common/header/header
   +h1("Home page")
   div.well#name
   div.component-container
-    include ../components/product
+    include ../components/helloworld/helloworld
 
   div.component-container.component-a
     div.background-container.background-primary-color
@@ -16,4 +16,3 @@ block content
 append content-script
   script.
     SystemJS.import('header.js');
-    SystemJS.import('product.js');

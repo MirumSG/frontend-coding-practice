@@ -6,5 +6,5 @@ flatten = require 'gulp-flatten'
 gulp.task('bower', ['clean'], (cb) ->
   gulp.src(bower())
   .pipe(flatten())
-  .pipe(gulp.dest(config.path.distpath + config.path.jspath + '/vendors'))
+  .pipe(gulp.dest(config.path.dist + config.path.etc_designs  + config.projName + config.path.vendors))
 )
